@@ -55,8 +55,6 @@
 
             var timeHere = 3000;
         
-            var start_time = new Date().getTime(); // start time variable
-        
             // begin the request
             $.ajax({
                 method: 'GET',
@@ -64,52 +62,21 @@
                 dataType: 'json',
                 timeout: timeHere,
                 success: function(data) {
-                    var request_time = new Date().getTime() - start_time;
                     $(".state-processing-ping").replaceWith('<span type="button" class=" btn-success state-ping ml-5 p-2 rounded">OK</span>');
                 },
                 error: function() {
-                    var request_time = new Date().getTime() - start_time;
                     $(".state-processing-ping").replaceWith('<span type="button" class=" btn-danger state-ping ml-5 p-2 rounded">ERROR</span>');
-                   
                 },
                 complete: function(){
-        
-                    // if (stopValue) {
-                    
-                    // }else{
-                    // setTimeout(pingSite, 1000);  
-                    // }
-        
-                    // $("#resultContent").on('scroll', function(){
-                    // scrollOneTime = true;
-                    // });
-        
-                    // updateScroll();        
         
                 }
             });
     
         }
-    
-        // stop the ping function
-        // function stop(form){
-        //   stopValue = true;
-        // }   
-    
-        // // update automatically the scroll
-        // function updateScroll(){
-        //   var element = document.getElementById("resultContent");
-        //   element.scrollTop = element.scrollHeight;
-        // }
-    
-        // $("#resultContent").on('scroll', function(){
-        //     scrolled=true;
-        // });
         
       </script>
     
     <script src="js/jquery.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
