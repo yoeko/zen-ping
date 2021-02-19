@@ -41,30 +41,16 @@
 <body>
 
     <div class="container">
-        <h1 class="mt-4 mb-5 text-center">Zen Ping</h1>
+        <div class="heading col-sm-6 offset-sm-3">
+            <h1 class="mt-4 mb-2 text-center">Z-Ping</h1>
+            <button class="btn btn-outline-secondary btn-lg rounded-0" onclick="startCheck()">GO</button>
+        </div>
         <hr>
 
-        <div class="row">
-
-            <div class="col-sm-8 offset-sm-2">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <form id="myForm" method="GET" class="ping-form">
-                            <div class="form-group">
-                                <label for="site">Ping Address</label>
-                                <small id="" class="form-text text-muted">Please put here the address you want to ping.</small>
-                                <input type="text" name="site" id="site" value="https://ping.zenetys.com/" class="form-control" placeholder="the site address" >
-                            </div>
-
-                            <div class="form-group">
-                                <button type="button" class="btn btn-outline-primary" id="test" onclick="pingSite(form)" > <span>Go Ping</span> </button>
-                                <div class="mt-2 state-ping"></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="results col-sm-8 offset-sm-2 shadow-sm px-5">
+            
         </div>
+
     </div>
 
     <script>
