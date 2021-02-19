@@ -44,9 +44,7 @@
     </div>
 
     <script>
-        $(".state-processing-ping").click(function(e) {
-            e.preventDefault();
-        });
+        
         // request function
         function pingSite(){
             $(".state-ping").replaceWith('<div class="spinner-grow text-primary state-processing-ping ml-5 pt-3" role="status"><span class="sr-only mt-4">Loading...</span></div>');
